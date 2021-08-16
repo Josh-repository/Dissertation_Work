@@ -27,11 +27,11 @@ Date: 16/08/2021.
 
 ## Steps to run:
 
-To run these programs, following steps should be followed -
-• Upgrade python version to the latest one(3.9.0)
-• Download dependencies using pip3 for -
-tkinter = 8.5
-visual-automata = 1.1.1
-Pillow = 8.3.1
-pdf2image 1.16.0
+To run these programs, following steps should be followed - <br>
+• Upgrade python version to the latest one(3.9.0)<br>
+• Download dependencies using pip3 for -<br>
+tkinter = 8.5 <br>
+visual-automata = 1.1.1 <br>
+Pillow = 8.3.1 <br>
+pdf2image 1.16.0 <br>
 • Run the programs in jupyter-lab

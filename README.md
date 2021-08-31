@@ -59,5 +59,5 @@ change the line func _get_lambda_closure()  code to the following <br>
                 except:<br>
                     continue<br>
         return encountered_states<br>
-At last change the file path in "Final_ProjectDemo" to your Anoconda/Jupyter file path to visualize the automata generated.
+At last change the file path in "Final_ProjectDemo" to your Anoconda/Jupyter file path to visualize the automata generated.<br>
 • Run the programs in jupyter-lab

@@ -30,8 +30,34 @@ Date: 16/08/2021.
 To run these programs, following steps should be followed - <br>
 • Upgrade python version to the latest one(3.9.0)<br>
 • Download dependencies using pip3 for -<br>
+grphviz = 2.49.0
 tkinter = 8.5 <br>
 visual-automata = 1.1.1 <br>
 Pillow = 8.3.1 <br>
 pdf2image 1.16.0 <br>
+• In the following file path : C:\Users\yourUser\Anaconda3\Lib\site-packages\visual_automata\fa\nfa.py <br>
+At line 504 - 515 replace the code with the below code <br>
+       
+       for i in input_str:<br>
+            status: bool = self.nfa.accepts_input(input_str=input_str)<br>
+            status, taken_transitions_pairs = self._pathfinder(<br>
+            input_str=input_str, status=status<br>
+            )<br>    
+And in the file path, C:\Users\yourUser\Anaconda3\Lib\site-packages\automata\fa\nfa.py <br>
+change the line func _get_lambda_closure()  code to the following <br>
+        stack = []<br>
+        encountered_states = set()<br>
+        stack.append(start_state)<br>
+
+        while stack:<br>
+            state = stack.pop()<br>
+            if state not in encountered_states:<br>
+                encountered_states.add(state)<br>
+                try:<br>
+                    if '' in self.transitions[state]:<br>
+                        stack.extend(self.transitions[state][''])<br>
+                except:<br>
+                    continue<br>
+        return encountered_states<br>
+At last change the file path in "Final_ProjectDemo" to your Anoconda/Jupyter file path to visualize the automata generated.
 • Run the programs in jupyter-lab
